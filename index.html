@@ -10,7 +10,7 @@
 
     <!-- Estilos  bootstrap, chat-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css.css">
+   
 
     <!-- área de código Firebase y lectura de Mensajes-->
     <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
@@ -62,7 +62,7 @@
 
 <body>
     
-    <div class="container">
+    <div class="row">
        
         <div class="row">
             <div class="col-md-12">
@@ -78,22 +78,23 @@
 
             </div>
         </div>
-        <div class="constainer">
+        <div class="row">
             <!-- inicio de la caja de chat con bootstrap -->
-            <div class="col-md-6 col-md-offset-3">
+         
                 <div class="panel panel-info">
                     <div class="panel-heading">
-                        <span class="glyphicon glyphicon-comment"></span> Chat | Firebase
+                        <span class="glyphicon glyphicon-comment"></span> CHAT | FIREBASE
+                        <span>Chat | Desarrollado en HTML5</span>
                         <div class="btn-group pull-right">
 
 
                         </div>
                     </div>
                     <div class="panel-body">
-                        <ul class="chat"> </ul>
+                        <ul class="chat" class="list-group"> </ul>
                     </div>
                     <div class="panel-footer">
-                        <div class="input-group">
+                        <div class="input-group container">
                             <input id="Mensaje" type="text" class="form-control input-sm" placeholder="Escribe un mensaje..." />
                             <span class="input-group-btn">
                                 <button class="btn btn-primary btn-sm" id="btnEnviar">
@@ -109,10 +110,8 @@
         </div>
     </div>
     <!-- template del item del chat (Oculto: para agarrar un clon y llenarlo e insertar en el chat)-->
-    <li style="display:none" id="plantilla" class="left clearfix">
-        <span class="chat-img pull-left">
-            <img src="http://placehold.it/50/55C1E7/fff&text=U" class="img-circle" />
-        </span>
+    <li style="display:none" id="plantilla" class="list-group-item">
+        
         <div class="chat-body clearfix">
             <div class="header">
                 <strong class="primary-font Nombre">Jack Sparrow</strong>
@@ -125,6 +124,10 @@
             </p>
         </div>
     </li>
+
+    <footer>
+        <span>Desarrollado por Linea de Oro | 2019</span>
+    </footer>
 
 
     <!-- Scripts de acción al botón -->
@@ -155,3 +158,5 @@
 </body>
 
 </html>
+
+
